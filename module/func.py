@@ -149,7 +149,7 @@ def sendConfirm(event):  #確認樣板
     except:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
 
-def sendCarousel3(event):  #轉盤樣板
+def sendCarouse(event):  #轉盤樣板
     try:
         message = TemplateSendMessage(
             alt_text='轉盤樣板',
