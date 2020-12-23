@@ -785,39 +785,5 @@ def sendButtonb(event):  #按鈕樣版
 	
 
   
-def sendCarousel(event):  #轉盤樣板
-    try:
-        message = TemplateSendMessage(
-            alt_text='其他',
-            template=CarouselTemplate(
-                columns=[
-                    CarouselColumn(
-                        thumbnail_image_url='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT4NQBoplbhOoo3bc_Zgj37mraOw88ddrWP7LTZfpfnY7FcDr5m&usqp=CAU',
-                        title=' ',
-                        text='其他資訊',
-                        actions=[
-                            URITemplateAction(
-                                label='洗錢防制之最終受益人查詢',
-                                uri='https://reurl.cc/AqXVEe'
-                            ),
-                            MessageTemplateAction(
-                                label='國際防制洗錢標準',
-                                text='1.處罰洗錢及資恐行為2.沒收不法所得及進行目標制裁3.國際合作4.建立防治機制'
-                            ),
-		          
-                             URITemplateAction(
-                                label='最新資訊',
-                                uri='https://www.amlo.moj.gov.tw/1461/1467/Lpsimplelist'
-                            ),
-                            
-                        ]
-                    ),
-
-                ]
-            )
-        )
-        line_bot_api.reply_message(event.reply_token,message)
-    except:
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
 
 
